@@ -1,0 +1,236 @@
+{
+  "quotes": [
+    {
+      "minScore": 100,
+      "maxScore": 100,
+      "quotes": [
+        {
+          "quote": "But handsome is as handsome does, as we say in the Shire",
+          "source": "Pippin"
+        }
+      ]
+    },
+    {
+      "minScore": 80,
+      "maxScore": 99,
+      "quotes": [
+        {
+          "quote": "Your time will come. You will face the same Evil, and you will defeat it.",
+          "source": "Arwen"
+        },
+        {
+          "quote": "All’s well that ends better.",
+          "source": "Hamfast Gamgee"
+        },
+        {
+          "quote": "The Quest stands upon the edge of a knife. Stray but a little, and it will fail, to the ruin of all. Yet hope remains while the Company is true.",
+          "source": "Galadriel"
+        },
+        {
+          "quote": "It is no bad thing to celebrate a simple life.",
+          "source": "Bilbo Baggins"
+        }
+      ]
+    },
+
+    {
+      "minScore": 50,
+      "maxScore": 79,
+      "quotes": [
+        {
+          "quote": "The wise speak only of what they know.",
+          "source": "Sauron"
+        },
+        {
+          "quote": "Faithless is he that says farewell when the road darkens.",
+          "source": "Gimli"
+        },
+        {
+          "quote": "Let him not vow to walk in the dark, who has not seen the nightfall.",
+          "source": "Elrond"
+        },
+        {
+          "quote": "It’s a dangerous business, Frodo, going out your door. You step onto the road, and if you don’t keep your feet, there’s no knowing where you might be swept off to.",
+          "source": "Bilbo Baggins"
+        }
+      ]
+    },
+
+    {
+      "maxScore": 50,
+      "minScore": 0,
+      "quotes": [
+        {
+          "quote": "You can not hide, I see you! There is no life after me. Only death!",
+          "source": "Sauron"
+        },
+        {
+          "quote": "Fool of a Took! This is a serious journey, not a hobbit walking-party. Throw yourself in next time, and then you will be no further nuisance!",
+          "source": "Gandalf"
+        },
+        {
+          "quote": "'Old fool!' he said. 'Old fool! This is my hour. Do you not know Death when you see it? Die now and curse in vain!' And with that he lifted high his sword and flames ran down the blade.",
+          "source": "The Witch King"
+        },
+        {
+          "quote": "Then at last his gaze was held: wall upon wall, battlement upon battlement, black tower of adamant, he saw it: Barad-dûr, Fortress of Sauron. All hope left him.",
+          "source": "Frodo"
+        }
+      ]
+    }
+  ],
+
+  "questions": [
+    {
+      "question": "Which birthday was Bilbo Baggins celebrating at the begining of Fellowship of the Ring?",
+      "answers": {
+        "1": {
+          "response": "111th",
+          "isCorrect": true
+        },
+        "2": {
+          "response": "100th",
+          "isCorrect": false
+        },
+        "3": {
+          "response": "116th",
+          "isCorrect": false
+        },
+        "4": {
+          "response": "120th",
+          "isCorrect": false
+        }
+      }
+    },
+    {
+      "question": "Which hobbits did Bilbo particularly dislike?",
+      "answers": {
+        "5": {
+          "response": "Brandybucks",
+          "isCorrect": false
+        },
+        "6": {
+          "response": "Bracegirdle",
+          "isCorrect": false
+        },
+        "7": {
+          "response": "Sackville-Baggins",
+          "isCorrect": true
+        },
+        "8": {
+          "response": "Tooks",
+          "isCorrect": false
+        }
+      }
+    },
+    {
+      "question": "About how long did Frodo posess the one Ring?",
+      "answers": {
+        "9": {
+          "response": "9 months",
+          "isCorrect": false
+        },
+        "10": {
+          "response": "1 year",
+          "isCorrect": false
+        },
+        "11": {
+          "response": "3 years",
+          "isCorrect": false
+        },
+        "12": {
+          "response": "17 years",
+          "isCorrect": true
+        }
+      }
+    },
+    {
+      "question": "Who saved Frodo and his friends from the Barrow-wights?",
+      "answers": {
+        "13": {
+          "response": "Gandalf",
+          "isCorrect": false
+        },
+        "14": {
+          "response": "Tom Bombadil",
+          "isCorrect": true
+        },
+        "15": {
+          "response": "Haldir",
+          "isCorrect": false
+        },
+        "16": {
+          "response": "Eomer",
+          "isCorrect": false
+        }
+      }
+    },
+    {
+      "question": "Who at the Council of Elrond came to inform Elrond of Gollum's esacpe from their captivity?",
+      "order": 2,
+      "answers": {
+        "17": {
+          "response": "Gandalf",
+          "isCorrect": false
+        },
+        "18": {
+          "response": "Boromir",
+          "isCorrect": false
+        },
+        "19": {
+          "response": "Gimli",
+          "isCorrect": false
+        },
+        "20": {
+          "response": "Legolas",
+          "isCorrect": true
+        }
+      }
+    },
+    {
+      "question": "Whose suggestion was it to go through the Mines of Moria?",
+      "order": 2,
+      "answers": {
+        "21": {
+          "response": "Gimli",
+          "isCorrect": false
+        },
+        "22": {
+          "response": "Aragon",
+          "isCorrect": false
+        },
+        "23": {
+          "response": "Gandalf",
+          "isCorrect": true
+        },
+        "24": {
+          "response": "Boromir",
+          "isCorrect": false
+        }
+      }
+    },
+    {
+      "question": "What happened to the Ent wives?",
+      "order": 1,
+      "answers": {
+        "25": {
+          "response": "They were hunted down and killed",
+          "isCorrect": false
+        },
+        "26": {
+          "response": "They were lost",
+          "isCorrect": true
+        },
+        "27": {
+          "response": "They were burned in a fire",
+          "isCorrect": false
+        },
+
+        "28": {
+          "response": "They left Middle Earth",
+          "isCorrect": false
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,229 @@
+/* Main layout */
+.quiz {
+  transition: background-color 20s ease-in 5s;
+  display: grid;
+  grid-template-rows: 3.75rem 1fr auto;
+  min-height: 100vh;
+  min-height: 100svh;
+  background-color: white;
+}
+
+.sky-1 {
+  background-color: #8597a4;
+}
+
+.sky-2 {
+  background-color: #7d6f6f;
+}
+
+.sky-3 {
+  background-color: #8a4642;
+}
+
+.question-title {
+  font-family: "Ringbearer";
+  background-color: rgb(39, 38, 53);
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+  padding: 0.8rem 1.5rem;
+  margin-top: 0;
+  text-align: center;
+  color: #ffc300;
+  place-self: center;
+  max-width: 60rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.timer {
+  margin-left: 2rem;
+}
+
+.question-title > * {
+  display: inline-block;
+}
+
+@media (max-width: 60rem) {
+  .question-title {
+    clip-path: unset;
+    justify-content: space-between;
+  }
+}
+
+.answers {
+  background-color: rgba(232, 233, 243, 0.3);
+  padding: 1rem;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  font-family: "Merriweather", serif;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  grid-area: "answer";
+  margin-top: 0.8rem;
+  transition: background-color 250ms, border 250ms;
+}
+.answers:hover,
+.answers:focus-visible {
+  background-color: rgba(232, 233, 243, 0.6);
+  border: 1px solid rgba(9, 9, 24, 0.4);
+}
+
+.question-container {
+  padding: min(2rem, 5%);
+  display: grid;
+  place-items: center;
+}
+
+.question-container form {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  display: grid;
+}
+
+fieldset {
+  /* Remove fieldset default styling  */
+  border: 0;
+  padding: 0;
+}
+.question-txt {
+  font-size: 2rem;
+  font-family: "Merriweather";
+  line-height: 1.2;
+  grid-area: "question";
+  margin: 2rem 0;
+  text-wrap: balance;
+}
+
+@media (max-width: 600px) {
+  .question-txt {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .question-txt {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+}
+
+.next {
+  all: unset;
+  border: 0;
+  padding: 0.2em 1.5rem;
+  font-family: "Aniron";
+  font-size: 1.5em;
+  justify-self: end;
+  background-color: none;
+  border: 3px solid black;
+  color: black;
+  margin-top: 1.5rem;
+  margin-left: auto;
+  justify-self: end;
+  transition: background-color 250ms;
+  cursor: pointer;
+}
+
+.next:hover,
+.next:focus-visible {
+  background-color: #ebbc23;
+  color: black;
+}
+
+.next:active {
+  background-color: #b7931d;
+  color: black;
+}
+
+/* ========================== results ===================== */
+
+.results {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 60rem) 1fr;
+  grid-template-areas: ". main .";
+  min-height: 100vh;
+
+  color: #ebbc23;
+}
+
+.fail {
+  background-image: linear-gradient(
+    179deg,
+    rgba(0, 0, 0, 1) 15%,
+    rgb(73, 11, 11) 103.9%
+  );
+}
+
+.pass {
+  background-image: linear-gradient(
+    179deg,
+    rgba(0, 0, 0, 1) 15%,
+    rgb(39, 38, 53) 103.9%
+  );
+}
+
+.score-wrapper {
+  grid-area: main;
+  padding: 0 2rem;
+}
+
+.score-title {
+  font-size: 4.5rem;
+  font-family: "Ringbearer";
+  text-align: center;
+}
+
+.score-percentage {
+  font-size: 6rem;
+  font-family: "Ringbearer";
+  text-align: center;
+  margin-top: 0;
+}
+
+.score-text {
+  font-size: 1.25rem;
+  font-family: "Merriweather";
+  margin-top: 4rem;
+}
+
+.score-quote,
+.quote-source {
+  font-family: "Aniron";
+  text-align: center;
+  line-height: 1.5;
+}
+
+.score-quote {
+  font-size: 1.8rem;
+}
+
+.quote-source {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.score-questions {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  font-size: 1.2rem;
+  font-family: "Merriweather";
+}
+
+.score-questions li {
+  column-gap: 0.8rem;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+/* .score-questions p {
+  vertical-align: center;
+} */
+
+.red {
+  color: rgb(224, 86, 84);
+}
+
+.green {
+  color: rgb(57, 162, 57);
+}
