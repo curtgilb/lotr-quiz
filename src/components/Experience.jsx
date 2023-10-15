@@ -1,4 +1,4 @@
-import { Environment, Sparkles, Billboard } from "@react-three/drei";
+import { Environment, Sparkles } from "@react-three/drei";
 import { Ring } from "./Ring";
 
 export function Experience() {
