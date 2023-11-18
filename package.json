@@ -1,5 +1,6 @@
 {
   "name": "lotr-quiz",
+  "homepage": "https://curtgilb.github.io/lotr-quiz/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
