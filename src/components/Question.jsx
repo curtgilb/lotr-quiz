@@ -9,29 +9,28 @@ export function Question({
 }) {
   return (
     <div className="question-container">
-      <form>
-        <fieldset>
-          <legend className="question-txt">{question}</legend>
-          {Object.entries(answers).map(([id, answer]) => (
-            <Answer
-              key={id}
-              id={id}
-              answer={answer.response}
-              handleSelection={handleSelection}
-            />
-          ))}
-        </fieldset>
-        <button
-          className="next"
-          onClick={(e) => {
-            e.preventDefault();
-            e.stopPropagation();
-            handleNext();
-          }}
-        >
-          {buttonText}
-        </button>
-      </form>
+      <p className="question-txt">{question}</p>
+      <div className="answers-container">
+        {Object.entries(answers).map(([id, answer]) => (
+          <Answer
+            key={id}
+            id={id}
+            answer={answer.response}
+            handleSelection={handleSelection}
+          />
+        ))}
+      </div>
+
+      <button
+        className="next"
+        onClick={(e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          handleNext();
+        }}
+      >
+        {buttonText}
+      </button>
     </div>
   );
 }

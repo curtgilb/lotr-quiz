@@ -230,6 +230,231 @@
           "isCorrect": false
         }
       }
+    },
+    {
+      "question": "Which of the following was Sauraman particularly skilled at?",
+      "order": 1,
+      "answers": {
+        "29": {
+          "response": "Seeing the future",
+          "isCorrect": false
+        },
+        "30": {
+          "response": "Control of the elements",
+          "isCorrect": false
+        },
+        "31": {
+          "response": "Voice and persauasion",
+          "isCorrect": true
+        },
+        "32": {
+          "response": "Reading other's thoughts",
+          "isCorrect": false
+        }
+      }
+    },
+    {
+      "question": "What was the name of the horse that Gandalf rode?",
+      "order": 1,
+      "answers": {
+        "29": {
+          "response": "Shadowfax",
+          "isCorrect": true
+        },
+        "30": {
+          "response": "Asfaloth",
+          "isCorrect": false
+        },
+        "31": {
+          "response": "Roheryn",
+          "isCorrect": false
+        },
+        "32": {
+          "response": "Brego",
+          "isCorrect": false
+        }
+      }
+    },
+    {
+      "question": "What effect did drinking Ent-draught have on Merry and Pippin?",
+      "answers": {
+        "29": {
+          "response": "They were able to communicate with trees",
+          "isCorrect": false
+        },
+        "30": {
+          "response": "They grew taller",
+          "isCorrect": true
+        },
+        "31": {
+          "response": "They were intoxicated",
+          "isCorrect": false
+        },
+        "32": {
+          "response": "They experienced no effect",
+          "isCorrect": false
+        }
+      }
+    },
+    {
+      "question": "What did Sauramon promise Grima Wormtongue in exchange for his help to weaken Theoden?",
+      "answers": {
+        "29": {
+          "response": "A ring of power",
+          "isCorrect": false
+        },
+        "30": {
+          "response": "Kingdom of Rohan",
+          "isCorrect": false
+        },
+        "31": {
+          "response": "Mythril",
+          "isCorrect": false
+        },
+        "32": {
+          "response": "Eowyn",
+          "isCorrect": true
+        }
+      }
+    },
+    {
+      "question": "TRUE/FALSE: Denethor, steward of Gondor, possed and used a palantiri/seeing stone?",
+      "answers": {
+        "29": {
+          "response": "True",
+          "isCorrect": true
+        },
+        "30": {
+          "response": "false",
+          "isCorrect": false
+        }
+      }
+    },
+    {
+      "question": "What quality did Aragon posses that led the people of Gondor to recognize him as their king?",
+      "answers": {
+        "29": {
+          "response": "Numenorian",
+          "isCorrect": false
+        },
+        "30": {
+          "response": "Healer",
+          "isCorrect": true
+        },
+        "31": {
+          "response": "Warrior",
+          "isCorrect": false
+        },
+        "32": {
+          "response": "Eowyn",
+          "isCorrect": true
+        }
+      }
+    },
+    {
+      "question": "Why was Eowyn and Mary able to kill the witch-king?",
+      "answers": {
+        "29": {
+          "response": "A ring of power",
+          "isCorrect": false
+        },
+        "30": {
+          "response": "Hands of healing",
+          "isCorrect": false
+        },
+        "31": {
+          "response": "Mythril",
+          "isCorrect": false
+        },
+        "32": {
+          "response": "Eowyn",
+          "isCorrect": true
+        }
+      }
+    },
+    {
+      "question": "Which of these title's doesn't apply to Aragon?",
+      "answers": {
+        "29": {
+          "response": "A ring of power",
+          "isCorrect": false
+        },
+        "30": {
+          "response": "Hands of healing",
+          "isCorrect": false
+        },
+        "31": {
+          "response": "Mythril",
+          "isCorrect": false
+        },
+        "32": {
+          "response": "Eowyn",
+          "isCorrect": true
+        }
+      }
+    },
+    {
+      "question": "When the hobbits return to the Shire, they find it had been taken over by \"Sharkey\". Who is he?",
+      "answers": {
+        "29": {
+          "response": "A ring of power",
+          "isCorrect": false
+        },
+        "30": {
+          "response": "Hands of healing",
+          "isCorrect": false
+        },
+        "31": {
+          "response": "Mythril",
+          "isCorrect": false
+        },
+        "32": {
+          "response": "Eowyn",
+          "isCorrect": true
+        }
+      }
+    },
+    {
+      "question": "Which of these characters never possesed one of the Elven rings?",
+      "answers": {
+        "29": {
+          "response": "A ring of power",
+          "isCorrect": false
+        },
+        "30": {
+          "response": "Hands of healing",
+          "isCorrect": false
+        },
+        "31": {
+          "response": "Mythril",
+          "isCorrect": false
+        },
+        "32": {
+          "response": "Eowyn",
+          "isCorrect": true
+        }
+      }
+    },
+    {
+      "question": "Why did the Elves leave middle earth??",
+      "answers": {
+        "29": {
+          "response": "A ring of power",
+          "isCorrect": false
+        },
+        "30": {
+          "response": "Hands of healing",
+          "isCorrect": false
+        },
+        "31": {
+          "response": "Mythril",
+          "isCorrect": false
+        },
+        "32": {
+          "response": "Eowyn",
+          "isCorrect": true
+        }
+      }
     }
   ]
 }

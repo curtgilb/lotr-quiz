@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { useMemo, useLayoutEffect } from "react";
+import { useMemo, useLayoutEffect, useState } from "react";
 import { Icon } from "../components/Icon";
 import confetti from "canvas-confetti";
 
@@ -26,9 +26,9 @@ export function Results({ questions, responses, quotes }) {
     () => numberCorrect / questions.length,
     [numberCorrect, questions]
   );
-
+  const [quote, setQuote] = useState(getQuote(percentageCorrect));
   useLayoutEffect(() => {
-    var duration = 15 * 1000;
+    var duration = 2 * 1000;
     var animationEnd = Date.now() + duration;
     var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
 
@@ -78,8 +78,8 @@ export function Results({ questions, responses, quotes }) {
         <p className={`score-percentage ${percentageCorrect <= 0.6 && "red"}`}>
           {(percentageCorrect * 100).toPrecision(2)}%
         </p>
-        <p className="score-quote">{getQuote(percentageCorrect).quote}</p>
-        <p className="quote-source">~Frodo</p>
+        <p className="score-quote">{quote.quote}</p>
+        <p className="quote-source">~{quote.source}</p>
         <p className="score-text">
           You answered {numberCorrect} out of {questions.length} correctly
         </p>

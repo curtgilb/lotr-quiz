@@ -26,7 +26,11 @@ export function Timer({ onEnd, initialTime, start }) {
     return () => clearInterval(timerId);
   }, [start, initialTime]);
 
-  return <span className="timer">0:{time}</span>;
+  return (
+    <span className="timer">
+      0:{time.toString().length === 2 ? time : `0${time}`}
+    </span>
+  );
 }
 
 Timer.propTypes = {

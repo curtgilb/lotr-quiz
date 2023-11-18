@@ -29,6 +29,7 @@
 
   .button {
     margin-top: 5rem;
+    place-self: start;
   }
 }
 
@@ -45,6 +46,12 @@
   .title {
     font-size: 2.25rem;
     text-align: center;
+  }
+
+  .button {
+    place-self: center;
+    font-size: 1rem;
+    font-size: 1.25rem;
   }
 }
 .text {
@@ -68,14 +75,13 @@
 }
 
 .button {
-  place-self: start center;
   display: block;
   border: 2px solid #ebbc23;
   color: #ebbc23;
   text-align: center;
   padding: 1rem 1.5rem;
   text-decoration: none;
-  font-size: 1.25rem;
+
   font-family: "Aniron";
   cursor: pointer;
   transition: background-color 250ms;
@@ -85,6 +91,11 @@
 .button:hover,
 .button:focus-visible {
   background-color: #ebbc23;
+  color: black;
+}
+
+.button:active {
+  background-color: #b08c17;
   color: black;
 }
 

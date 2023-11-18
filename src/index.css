@@ -24,7 +24,7 @@
   font-family: "Ringbearer";
   background-color: rgb(39, 38, 53);
   clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
-  padding: 0.8rem 1.5rem;
+  padding: 0.6rem 1.5rem;
   margin-top: 0;
   text-align: center;
   color: #ffc300;
@@ -40,6 +40,21 @@
 
 .question-title > * {
   display: inline-block;
+}
+
+.next {
+  /* all: unset; */
+  border: 0;
+  padding: 0.2em 1.5rem;
+  font-family: "Aniron";
+  place-self: end;
+  background-color: unset;
+  border: 3px solid black;
+  font-size: 1.5rem;
+  color: black;
+  margin-left: auto;
+  transition: background-color 250ms;
+  cursor: pointer;
 }
 
 @media (max-width: 60rem) {
@@ -66,31 +81,36 @@
   border: 1px solid rgba(9, 9, 24, 0.4);
 }
 
+.answers input {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
 .question-container {
-  padding: min(2rem, 5%);
+  padding: 0 min(2rem, 5%);
   display: grid;
+  grid-template-rows: min-content 1fr min-content;
   place-items: center;
-}
-
-.question-container form {
+  row-gap: 1.5rem;
+  max-width: 60rem;
   width: 100%;
-  max-width: 80rem;
   margin-inline: auto;
+  margin-top: 1rem;
+}
+.answers-container {
+  width: 100%;
   display: grid;
+  align-content: center;
+  height: 100%;
 }
 
-fieldset {
-  /* Remove fieldset default styling  */
-  border: 0;
-  padding: 0;
-}
 .question-txt {
   font-size: 2rem;
   font-family: "Merriweather";
   line-height: 1.2;
   grid-area: "question";
-  margin: 2rem 0;
-  text-wrap: balance;
+  margin-top: 1rem;
+  place-self: start;
 }
 
 @media (max-width: 600px) {
@@ -104,23 +124,15 @@ fieldset {
     font-size: 1.2rem;
     font-weight: 700;
   }
-}
 
-.next {
-  all: unset;
-  border: 0;
-  padding: 0.2em 1.5rem;
-  font-family: "Aniron";
-  font-size: 1.5em;
-  justify-self: end;
-  background-color: none;
-  border: 3px solid black;
-  color: black;
-  margin-top: 1.5rem;
-  margin-left: auto;
-  justify-self: end;
-  transition: background-color 250ms;
-  cursor: pointer;
+  .answers {
+    font-size: 1rem;
+  }
+
+  .next {
+    font-size: 1.2rem;
+    place-self: center;
+  }
 }
 
 .next:hover,
@@ -202,18 +214,57 @@ fieldset {
 }
 
 .score-questions {
-  display: flex;
-  flex-direction: column;
-  row-gap: 1.5rem;
+  display: grid;
+  row-gap: 1.8rem;
   font-size: 1.2rem;
   font-family: "Merriweather";
 }
 
 .score-questions li {
   column-gap: 0.8rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: min-content 1fr;
   list-style: none;
   align-items: center;
+}
+
+.score-questions li p {
+  margin: 0;
+}
+
+.score-questions li svg {
+  width: 20px;
+}
+
+@media (max-width: 760px) {
+  .score-title {
+    font-size: 2.5rem;
+  }
+
+  .score-percentage {
+    font-size: 3rem;
+  }
+
+  .score-quote {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  .quote-source {
+    font-size: 0.8rem;
+    margin-top: 1rem;
+  }
+  .score-questions,
+  .score-text {
+    font-size: 1rem;
+  }
+
+  .score-text {
+    font-weight: 700;
+  }
+
+  .score-questions {
+    padding: 0;
+  }
 }
 
 /* .score-questions p {

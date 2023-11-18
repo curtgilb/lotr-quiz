@@ -3,6 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { Experience } from "../components/Experience";
 import { OrbitControls } from "@react-three/drei";
 import styles from "../styles/home.module.css";
+import { Link } from "react-router-dom";
 
 export function Home() {
   return (
@@ -29,9 +30,9 @@ export function Home() {
           the shadows lie.
         </p>
 
-        <a className={styles.button} href="/quiz">
+        <Link to="/quiz" className={styles.button}>
           Shall we begin, precious?
-        </a>
+        </Link>
       </div>
     </div>
   );
