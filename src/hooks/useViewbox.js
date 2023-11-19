@@ -12,10 +12,8 @@ export function useViewbox() {
       { size: 1800, viewBox: "600, 0, 2440, 800" },
       { size: 2200, viewBox: "0, 0, 5000, 800" },
     ];
-    console.log(`viewbox width: ${width}`);
     for (const breakpoint of breakpoints) {
       if (width <= breakpoint.size) {
-        console.log(`returned: ${width}`);
         return breakpoint.viewBox;
       }
     }

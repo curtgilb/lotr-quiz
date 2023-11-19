@@ -12,7 +12,7 @@
 }
 
 .background {
-  fill: #a1a1a1;
+  fill: #7c7b7b;
 }
 .far-away {
   fill: #bababa;
@@ -26,23 +26,3 @@
   transition: fill 20s ease-in 5s;
   fill: rgb(197, 108, 19);
 }
-
-/* .foreground .pupil {
-  animation-duration: 5s;
-  animation-name: search;
-  animation-iteration-count: infinite;
-}
-
-@keyframes search {
-  0% {
-    transform: translate(-4px, 0);
-  }
-
-  100% {
-    transform: translate(4px, 0);
-  }
-} */
-
-/* .mountains {
-  transform: scale(20%);
-} */

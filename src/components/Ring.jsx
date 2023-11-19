@@ -12,11 +12,6 @@ Title: One Ring
 import { useGLTF } from "@react-three/drei";
 import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
-import {
-  Bloom,
-  EffectComposer,
-  ToneMapping,
-} from "@react-three/postprocessing";
 
 export function Ring(props) {
   const ring = useRef();
@@ -28,7 +23,7 @@ export function Ring(props) {
   });
 
   materials.Default.envMapIntensity = 0.3;
-  materials.Default.emissiveIntensity = 0.7;
+  materials.Default.emissiveIntensity = 1;
 
   return (
     <group ref={ring} {...props} dispose={null} scale={2}>
@@ -41,6 +36,3 @@ export function Ring(props) {
 }
 
 useGLTF.preload("./models/ring/scene-transformed.glb");
-
-// material={materials.Default}
-// envMapIntensity={0.000001}

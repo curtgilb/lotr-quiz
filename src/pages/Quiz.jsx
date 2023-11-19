@@ -10,6 +10,7 @@ export function Quiz() {
   const [level, setLevel] = useState(1); // Control the sky/mountain color
   const [entryTimeline, setEntryTimeline] = useState(); // Entrance animation timeline
   const headerRef = useRef();
+  const questionRef = useRef();
   // Answers and reponses
   const [userAnswers, setUserAnswers] = useState([]);
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -36,7 +37,7 @@ export function Quiz() {
         },
         0
       );
-      t1.from(".question-container", { opacity: 0, duration: 0.25 }, 1.2);
+      t1.from(".gsap-wrapper", { opacity: 0, duration: 0.25 }, 1.2);
       setEntryTimeline(t1);
     }, headerRef);
 
@@ -85,17 +86,18 @@ export function Quiz() {
             start={startTimer}
           />
         </h1>
-
-        <Question
-          key={questionIndex}
-          question={questionBank[questionIndex].question}
-          answers={questionBank[questionIndex].answers}
-          buttonText={
-            questionIndex === questionBank.length - 1 ? "Finish" : "Next"
-          }
-          handleSelection={handleSelection}
-          handleNext={next}
-        />
+        <div className="gsap-wrapper">
+          <Question
+            key={questionIndex}
+            question={questionBank[questionIndex].question}
+            answers={questionBank[questionIndex].answers}
+            buttonText={
+              questionIndex === questionBank.length - 1 ? "Finish" : "Next"
+            }
+            handleSelection={handleSelection}
+            handleNext={next}
+          />
+        </div>
         <Mountains level={level} timeline={entryTimeline} />
       </div>
     );

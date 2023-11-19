@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { useMemo, useLayoutEffect, useState } from "react";
+import { useMemo, useLayoutEffect } from "react";
 import { Icon } from "../components/Icon";
 import confetti from "canvas-confetti";
 
@@ -14,7 +14,6 @@ export function Results({ questions, responses, quotes }) {
     () =>
       responses.reduce((totalScore, thisResponse, index) => {
         if (thisResponse && questions[index].answers[thisResponse].isCorrect) {
-          console.log(totalScore);
           return totalScore + 1;
         }
         return totalScore;
@@ -22,61 +21,65 @@ export function Results({ questions, responses, quotes }) {
     [questions, responses]
   );
 
-  const percentageCorrect = useMemo(
-    () => numberCorrect / questions.length,
-    [numberCorrect, questions]
+  const percentageCorrect = Math.round(
+    (numberCorrect / questions.length) * 100
   );
-  const [quote, setQuote] = useState(getQuote(percentageCorrect));
-  useLayoutEffect(() => {
-    var duration = 2 * 1000;
-    var animationEnd = Date.now() + duration;
-    var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
 
-    var interval = setInterval(function () {
-      var timeLeft = animationEnd - Date.now();
-
-      if (timeLeft <= 0) {
-        return clearInterval(interval);
-      }
-
-      var particleCount = 50 * (timeLeft / duration);
-      // since particles fall down, start a bit higher than random
-      confetti(
-        Object.assign({}, defaults, {
-          particleCount,
-          origin: { x: getRandomNumber(0.1, 0.3), y: Math.random() - 0.2 },
-        })
-      );
-      confetti(
-        Object.assign({}, defaults, {
-          particleCount,
-          origin: { x: getRandomNumber(0.7, 0.9), y: Math.random() - 0.2 },
-        })
-      );
-    }, 250);
-    return () => confetti.reset();
-  });
-
-  function getQuote(percentage) {
-    console.log("Percentage" + percentage);
+  const quote = useMemo(() => {
     for (const bracket of quotes) {
       if (
-        percentage * 100 >= bracket.minScore &&
-        percentage * 100 <= bracket.maxScore
+        percentageCorrect >= bracket.minScore &&
+        percentageCorrect <= bracket.maxScore
       ) {
         const random = getRandomNumber(0, bracket.quotes.length - 1, true);
         return bracket.quotes[random];
       }
     }
     return "error";
-  }
+  }, [percentageCorrect]);
+
+  useLayoutEffect(() => {
+    if (percentageCorrect >= 100) {
+      var duration = 2 * 1000;
+      var animationEnd = Date.now() + duration;
+      var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+      var interval = setInterval(function () {
+        var timeLeft = animationEnd - Date.now();
+
+        if (timeLeft <= 0) {
+          return clearInterval(interval);
+        }
+
+        var particleCount = 50 * (timeLeft / duration);
+        // since particles fall down, start a bit higher than random
+        confetti(
+          Object.assign({}, defaults, {
+            particleCount,
+            origin: { x: getRandomNumber(0.1, 0.3), y: Math.random() - 0.2 },
+          })
+        );
+        confetti(
+          Object.assign({}, defaults, {
+            particleCount,
+            origin: { x: getRandomNumber(0.7, 0.9), y: Math.random() - 0.2 },
+          })
+        );
+      }, 250);
+      return () => confetti.reset();
+    }
+  });
 
   return (
-    <div className={`results${percentageCorrect <= 0.6 ? " fail" : " pass"}`}>
+    <div className={`results${percentageCorrect <= 60 ? " fail" : " pass"}`}>
       <div className="score-wrapper">
         <h1 className="score-title">Results</h1>
-        <p className={`score-percentage ${percentageCorrect <= 0.6 && "red"}`}>
-          {(percentageCorrect * 100).toPrecision(2)}%
+        <p
+          className={`score-percentage ${
+            percentageCorrect <= 60 ? "red" : "green"
+          }`}
+        >
+          {percentageCorrect}%
         </p>
         <p className="score-quote">{quote.quote}</p>
         <p className="quote-source">~{quote.source}</p>

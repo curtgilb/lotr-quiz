@@ -90,7 +90,7 @@
   padding: 0 min(2rem, 5%);
   display: grid;
   grid-template-rows: min-content 1fr min-content;
-  place-items: center;
+
   row-gap: 1.5rem;
   max-width: 60rem;
   width: 100%;
@@ -108,9 +108,7 @@
   font-size: 2rem;
   font-family: "Merriweather";
   line-height: 1.2;
-  grid-area: "question";
   margin-top: 1rem;
-  place-self: start;
 }
 
 @media (max-width: 600px) {
@@ -276,5 +274,5 @@
 }
 
 .green {
-  color: rgb(57, 162, 57);
+  color: rgb(9, 146, 9);
 }

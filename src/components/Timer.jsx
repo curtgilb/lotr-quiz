@@ -3,7 +3,6 @@ import { useState, useEffect, useRef } from "react";
 export function Timer({ onEnd, initialTime, start }) {
   const [time, setTime] = useState(initialTime);
   const timeRef = useRef();
-  console.log("Rerender");
   useEffect(() => {
     timeRef.current = time;
   }, [time]);
@@ -13,7 +12,6 @@ export function Timer({ onEnd, initialTime, start }) {
     setTime(initialTime);
     if (start) {
       timerId = setInterval(() => {
-        console.log(`Time ref ${timeRef.current}`);
         if (timeRef.current > 0) {
           setTime((t) => t - 1);
         } else {

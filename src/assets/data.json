@@ -110,7 +110,7 @@
           "isCorrect": false
         },
         "6": {
-          "response": "Bracegirdle",
+          "response": "Bracegirdles",
           "isCorrect": false
         },
         "7": {
@@ -188,45 +188,300 @@
     },
     {
       "question": "Whose suggestion was it to go through the Mines of Moria?",
-      "order": 2,
       "answers": {
         "21": {
-          "response": "Gimli",
+          "response": "Gimli's",
           "isCorrect": false
         },
         "22": {
-          "response": "Aragon",
+          "response": "Aragon's",
           "isCorrect": false
         },
         "23": {
-          "response": "Gandalf",
+          "response": "Gandalf's",
           "isCorrect": true
         },
         "24": {
-          "response": "Boromir",
+          "response": "Boromir's",
+          "isCorrect": false
+        }
+      }
+    },
+    {
+      "question": "What was Galadriel's gift to Gimli?",
+      "answers": {
+        "25": {
+          "response": "An axe",
+          "isCorrect": false
+        },
+        "26": {
+          "response": "Strands of her hair",
+          "isCorrect": true
+        },
+        "27": {
+          "response": "Precious gems",
+          "isCorrect": false
+        },
+        "28": {
+          "response": "A vision of the future",
           "isCorrect": false
         }
       }
     },
     {
       "question": "What happened to the Ent wives?",
-      "order": 1,
       "answers": {
-        "25": {
+        "29": {
           "response": "They were hunted down and killed",
           "isCorrect": false
         },
-        "26": {
+        "30": {
           "response": "They were lost",
           "isCorrect": true
         },
-        "27": {
+        "31": {
           "response": "They were burned in a fire",
           "isCorrect": false
         },
 
-        "28": {
+        "32": {
           "response": "They left Middle Earth",
+          "isCorrect": false
+        }
+      }
+    },
+    {
+      "question": "Which of the following was Saruman particularly skilled at?",
+      "answers": {
+        "33": {
+          "response": "Seeing the future",
+          "isCorrect": false
+        },
+        "34": {
+          "response": "Controlling the elements",
+          "isCorrect": false
+        },
+        "35": {
+          "response": "Voice and persauasion",
+          "isCorrect": true
+        },
+        "36": {
+          "response": "Reading other's thoughts",
+          "isCorrect": false
+        }
+      }
+    },
+    {
+      "question": "What was the name of the horse that Gandalf rode?",
+      "answers": {
+        "37": {
+          "response": "Shadowfax",
+          "isCorrect": true
+        },
+        "38": {
+          "response": "Asfaloth",
+          "isCorrect": false
+        },
+        "39": {
+          "response": "Roheryn",
+          "isCorrect": false
+        },
+        "40": {
+          "response": "Brego",
+          "isCorrect": false
+        }
+      }
+    },
+    {
+      "question": "What effect did drinking Ent-draught have on Merry and Pippin?",
+      "answers": {
+        "41": {
+          "response": "They were able to communicate with trees",
+          "isCorrect": false
+        },
+        "42": {
+          "response": "They grew taller",
+          "isCorrect": true
+        },
+        "43": {
+          "response": "They were intoxicated",
+          "isCorrect": false
+        },
+        "44": {
+          "response": "They experienced no effect",
+          "isCorrect": false
+        }
+      }
+    },
+    {
+      "question": "What did Saruman promise Grima Wormtongue in exchange for his help to weaken Theoden?",
+      "answers": {
+        "45": {
+          "response": "A ring of power",
+          "isCorrect": false
+        },
+        "46": {
+          "response": "Kingdom of Rohan",
+          "isCorrect": false
+        },
+        "47": {
+          "response": "Mythril",
+          "isCorrect": false
+        },
+        "48": {
+          "response": "Eowyn",
+          "isCorrect": true
+        }
+      }
+    },
+    {
+      "question": "True or False: Denethor, steward of Gondor, possessed and used a palantiri/seeing stone?",
+      "answers": {
+        "49": {
+          "response": "True",
+          "isCorrect": true
+        },
+        "50": {
+          "response": "false",
+          "isCorrect": false
+        }
+      }
+    },
+    {
+      "question": "What quality did Aragon posses that led the people of Gondor to recognize him as their king?",
+      "answers": {
+        "51": {
+          "response": "Diplomat",
+          "isCorrect": false
+        },
+        "52": {
+          "response": "Healer",
+          "isCorrect": true
+        },
+        "53": {
+          "response": "Warrior",
+          "isCorrect": false
+        },
+        "54": {
+          "response": "Ranger",
+          "isCorrect": false
+        }
+      }
+    },
+    {
+      "question": "Why was Eowyn able to kill the witch-king?",
+      "answers": {
+        "55": {
+          "response": "Sauron's powers were weakening",
+          "isCorrect": false
+        },
+        "56": {
+          "response": "Hit a vulnerable spot",
+          "isCorrect": false
+        },
+        "57": {
+          "response": "Sword had special properties",
+          "isCorrect": true
+        },
+        "58": {
+          "response": "Purity of heart",
+          "isCorrect": false
+        }
+      }
+    },
+    {
+      "question": "Which of these titles do not apply to Aragorn?",
+      "answers": {
+        "59": {
+          "response": "Elessar",
+          "isCorrect": false
+        },
+        "60": {
+          "response": "Mithrandir",
+          "isCorrect": true
+        },
+        "61": {
+          "response": "Envinyatar",
+          "isCorrect": false
+        },
+        "62": {
+          "response": "Dunadan",
+          "isCorrect": false
+        }
+      }
+    },
+    {
+      "question": "Faramir and Eowyn were married after the war of the ring. True or False?",
+      "answers": {
+        "63": {
+          "response": "True",
+          "isCorrect": true
+        },
+        "64": {
+          "response": "False",
+          "isCorrect": false
+        }
+      }
+    },
+    {
+      "question": "When the hobbits return to the Shire, they find it had been taken over by \"Sharkey\". Who is he?",
+      "answers": {
+        "65": {
+          "response": "Saruman",
+          "isCorrect": true
+        },
+        "66": {
+          "response": "Lotho Sackville-Baggins",
+          "isCorrect": false
+        },
+        "67": {
+          "response": "Azog",
+          "isCorrect": false
+        },
+        "68": {
+          "response": "Shagrat",
+          "isCorrect": false
+        }
+      }
+    },
+    {
+      "question": "Which of these characters never possesed one of the Elven rings?",
+      "answers": {
+        "69": {
+          "response": "Galadriel",
+          "isCorrect": false
+        },
+        "70": {
+          "response": "Elrond",
+          "isCorrect": false
+        },
+        "71": {
+          "response": "Gandalf",
+          "isCorrect": false
+        },
+        "72": {
+          "response": "Celeborn",
+          "isCorrect": true
+        }
+      }
+    },
+    {
+      "question": "Why did Frodo leave middle earth with the elves?",
+      "answers": {
+        "73": {
+          "response": "To heal from his injuries",
+          "isCorrect": true
+        },
+        "74": {
+          "response": "He was bored of the Shire",
+          "isCorrect": false
+        },
+        "75": {
+          "response": "Gandalf made him leave",
+          "isCorrect": false
+        },
+        "76": {
+          "response": "To ascend as one of the Maiar",
           "isCorrect": false
         }
       }
