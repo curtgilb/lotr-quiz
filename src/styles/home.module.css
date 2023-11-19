@@ -3,7 +3,9 @@
   max-width: 2000px;
   height: 100vh;
 
-  padding: 3rem;
+  padding-inline: 1.8rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
   margin: 0 auto;
 }
 
@@ -54,6 +56,15 @@
     font-size: 1.25rem;
   }
 }
+
+@media (max-width: 380px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  .button {
+    font-size: 1rem;
+  }
+}
 .text {
   color: #fc901f;
   font-family: "Merriweather", serif;
@@ -102,9 +113,10 @@
 .title {
   font-family: "Ringbearer";
   color: #ebbc23;
-  text-shadow: #fc901f 1px 0 4px;
+  /* text-shadow: #fc901f 1px 0 4px; */
   grid-area: title;
   margin: 0;
+  line-height: 1.2;
 
   /* display: grid;
   grid-template-rows: 1fr 1fr 1fr; */

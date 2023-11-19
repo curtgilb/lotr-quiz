@@ -15,7 +15,7 @@ export function Experience() {
         ]}
       />
 
-      <Sparkles color="orange" scale={4} count={200} />
+      {/* <Sparkles color="orange" scale={4} count={200} /> */}
 
       <Ring></Ring>
     </>

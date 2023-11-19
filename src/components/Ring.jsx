@@ -12,8 +12,11 @@ Title: One Ring
 import { useGLTF } from "@react-three/drei";
 import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
-
-import { Bloom, EffectComposer } from "@react-three/postprocessing";
+import {
+  Bloom,
+  EffectComposer,
+  ToneMapping,
+} from "@react-three/postprocessing";
 
 export function Ring(props) {
   const ring = useRef();
@@ -24,21 +27,14 @@ export function Ring(props) {
     ring.current.rotation.x += delta * 0.1;
   });
 
-  materials.Default.envMapIntensity = 0.2;
-  materials.Default.emissiveIntensity = 1;
-  materials.Default.toneMapped = false;
+  materials.Default.envMapIntensity = 0.3;
+  materials.Default.emissiveIntensity = 0.7;
+
   return (
     <group ref={ring} {...props} dispose={null} scale={2}>
-      <EffectComposer>
-        <Bloom mipmapBlur intensity={0.1}></Bloom>
-      </EffectComposer>
       <mesh
         geometry={nodes.defaultMaterial.geometry}
         material={materials.Default}
-        envMapIntensity={0.3}
-        emissive="orange"
-        emissiveIntensity={1}
-        toneMapped={false}
       ></mesh>
     </group>
   );
