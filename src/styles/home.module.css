@@ -121,6 +121,12 @@
   /* display: grid;
   grid-template-rows: 1fr 1fr 1fr; */
 }
+
+@media (max-width: 1820px) {
+  .title {
+    font-size: 3rem;
+  }
+}
 .title span {
   display: inline-block;
 }
