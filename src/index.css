@@ -55,6 +55,7 @@
   margin-left: auto;
   transition: background-color 250ms;
   cursor: pointer;
+  background-color: #ebbc23;
 }
 
 @media (max-width: 60rem) {
@@ -86,11 +87,15 @@
   margin-right: 0.5rem;
 }
 
+.gsap-wrapper {
+  z-index: 50;
+}
+
 .question-container {
   padding: 0 min(2rem, 5%);
   display: grid;
   grid-template-rows: min-content 1fr min-content;
-
+  z-index: 50;
   row-gap: 1.5rem;
   max-width: 60rem;
   width: 100%;
@@ -131,12 +136,6 @@
     font-size: 1.2rem;
     place-self: center;
   }
-}
-
-.next:hover,
-.next:focus-visible {
-  background-color: #ebbc23;
-  color: black;
 }
 
 .next:active {

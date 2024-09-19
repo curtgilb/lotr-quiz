@@ -3,6 +3,11 @@
   transition: fill 20s ease-in 5s, opacity 10s ease-out;
 }
 
+.mountains {
+  position: fixed;
+  bottom: 0;
+}
+
 .foreground {
   fill: #080618;
 }

@@ -1,16 +1,16 @@
-import { useState, useLayoutEffect, useRef } from "react";
-import { Results } from "./Results";
-import { Question } from "../components/Question";
-import { Mountains } from "../components/Mountains";
-import { Timer } from "../components/Timer";
-import data from "../assets/data.json";
 import gsap from "gsap";
+import { useLayoutEffect, useRef, useState } from "react";
+import data from "../assets/data.json";
+import { Mountains } from "../components/Mountains";
+import { Question } from "../components/Question";
+import { Timer } from "../components/Timer";
+import { Results } from "./Results";
 
 export function Quiz() {
   const [level, setLevel] = useState(1); // Control the sky/mountain color
   const [entryTimeline, setEntryTimeline] = useState(); // Entrance animation timeline
   const headerRef = useRef();
-  const questionRef = useRef();
+
   // Answers and reponses
   const [userAnswers, setUserAnswers] = useState([]);
   const [questionIndex, setQuestionIndex] = useState(0);
@@ -50,9 +50,8 @@ export function Quiz() {
     setCurrentChoice(undefined);
     // Go to next question
     if (questionIndex < questionBank.length - 1) {
-      // level === 7 || level === 14
       setQuestionIndex(() => questionIndex + 1);
-      if (questionIndex === 2 || questionIndex === 5) {
+      if (questionIndex === 5 || questionIndex === 10) {
         setLevel((l) => l + 1);
       }
     } else {
