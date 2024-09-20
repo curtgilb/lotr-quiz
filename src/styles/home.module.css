@@ -18,6 +18,14 @@
   grid-column: 1/3;
 }
 
+.attribution a:link {
+  color: #ebbc23;
+}
+
+.attribution a:visited {
+  color: red;
+}
+
 .wrapper {
   background-image: linear-gradient(
     179deg,
