@@ -6,6 +6,8 @@ import { Question } from "../components/Question";
 import { Timer } from "../components/Timer";
 import { Results } from "./Results";
 
+const initialTime = 30;
+
 export function Quiz() {
   const [level, setLevel] = useState(1); // Control the sky/mountain color
   const [entryTimeline, setEntryTimeline] = useState(); // Entrance animation timeline
@@ -18,12 +20,13 @@ export function Quiz() {
   const questionBank = data.questions;
   const [completed, setCompleted] = useState(false);
   // Timer
-  const [startTimer, setStartTimer] = useState(false);
+  const [time, setTime] = useState(initialTime);
+  const [pauseTimer, setPauseTimer] = useState(true);
 
   useLayoutEffect(() => {
     const gsapCtx = gsap.context(() => {
       const t1 = gsap.timeline({
-        onComplete: () => setStartTimer(() => true),
+        onComplete: () => setPauseTimer(() => false),
         onReverseComplete: () => setCompleted(() => true),
       });
       t1.from(".question-title", { y: -100 }, 0.5);
@@ -50,19 +53,18 @@ export function Quiz() {
     setCurrentChoice(undefined);
     // Go to next question
     if (questionIndex < questionBank.length - 1) {
-      setQuestionIndex(() => questionIndex + 1);
+      setQuestionIndex((i) => i + 1);
+      setTime(initialTime);
       if (questionIndex === 5 || questionIndex === 10) {
         setLevel((l) => l + 1);
       }
     } else {
       // End the game
+      setPauseTimer(() => true);
       entryTimeline.reverse();
     }
   }
 
-  function handleSelection(id) {
-    setCurrentChoice(() => id);
-  }
   if (completed) {
     return (
       <Results
@@ -71,34 +73,44 @@ export function Quiz() {
         quotes={data.quotes}
       ></Results>
     );
-  } else {
-    return (
-      <div ref={headerRef} className={`quiz sky-${level}`}>
-        <h1 className="question-title">
-          Question {questionIndex + 1}{" "}
-          <Timer
-            key={questionIndex}
-            initialTime={30}
-            onEnd={() => {
-              next();
-            }}
-            start={startTimer}
-          />
-        </h1>
-        <div className="gsap-wrapper">
+  }
+
+  return (
+    <div ref={headerRef} className={`quiz sky-${level}`}>
+      <h1 className="question-title">
+        Question {questionIndex + 1}
+        <Timer
+          time={time}
+          setTime={setTime}
+          initialTime={30}
+          onEnd={() => {
+            next();
+          }}
+          paused={pauseTimer}
+        />
+      </h1>
+      <div className="gsap-wrapper">
+        <div className="question-container">
           <Question
-            key={questionIndex}
             question={questionBank[questionIndex].question}
             answers={questionBank[questionIndex].answers}
-            buttonText={
-              questionIndex === questionBank.length - 1 ? "Finish" : "Next"
-            }
-            handleSelection={handleSelection}
+            handleSelection={setCurrentChoice}
             handleNext={next}
           />
+          <button
+            className="next"
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              next();
+            }}
+          >
+            {questionIndex === questionBank.length - 1 ? "Finish" : "Next"}
+          </button>
         </div>
-        <Mountains level={level} timeline={entryTimeline} />
       </div>
-    );
-  }
+
+      <Mountains level={level} timeline={entryTimeline} />
+    </div>
+  );
 }

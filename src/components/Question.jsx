@@ -1,14 +1,8 @@
 import PropTypes from "prop-types";
 import { Answer } from "./Answer";
-export function Question({
-  question,
-  answers,
-  buttonText,
-  handleSelection,
-  handleNext,
-}) {
+export function Question({ question, answers, handleSelection }) {
   return (
-    <div className="question-container">
+    <>
       <p className="question-txt">{question}</p>
       <div className="answers-container">
         {Object.entries(answers).map(([id, answer]) => (
@@ -20,18 +14,7 @@ export function Question({
           />
         ))}
       </div>
-
-      <button
-        className="next"
-        onClick={(e) => {
-          e.preventDefault();
-          e.stopPropagation();
-          handleNext();
-        }}
-      >
-        {buttonText}
-      </button>
-    </div>
+    </>
   );
 }
 
@@ -40,5 +23,4 @@ Question.propTypes = {
   answers: PropTypes.object,
   handleSelection: PropTypes.func,
   handleNext: PropTypes.func,
-  buttonText: PropTypes.string,
 };

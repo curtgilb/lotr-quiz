@@ -1,39 +1,27 @@
 import PropTypes from "prop-types";
-import { useState, useEffect, useRef } from "react";
-export function Timer({ onEnd, initialTime, start }) {
-  const [time, setTime] = useState(initialTime);
-  const timeRef = useRef();
-  useEffect(() => {
-    timeRef.current = time;
-  }, [time]);
+import { useEffect } from "react";
+
+export function Timer({ time, setTime, onEnd, initialTime, paused }) {
+  if (time < 0) {
+    onEnd();
+  }
 
   useEffect(() => {
-    let timerId;
-    setTime(initialTime);
-    if (start) {
-      timerId = setInterval(() => {
-        if (timeRef.current > 0) {
-          setTime((t) => t - 1);
-        } else {
-          clearInterval(timerId);
-          onEnd();
-        }
+    if (!paused) {
+      const timerId = setInterval(() => {
+        setTime((t) => t - 1);
       }, 1000);
+      return () => clearInterval(timerId);
     }
+  }, [paused, setTime]);
 
-    return () => clearInterval(timerId);
-  }, [start, initialTime]);
-
-  return (
-    <span className="timer">
-      0:{time.toString().length === 2 ? time : `0${time}`}
-    </span>
-  );
+  return <span className="timer">0:{String(time).padStart(2, "0")}</span>;
 }
 
 Timer.propTypes = {
+  time: PropTypes.number,
+  setTime: PropTypes.func,
   onEnd: PropTypes.func,
   initialTime: PropTypes.number,
-  isActive: PropTypes.bool,
-  start: PropTypes.bool,
+  paused: PropTypes.bool,
 };

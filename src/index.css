@@ -53,9 +53,24 @@
   font-size: 1.5rem;
   color: black;
   margin-left: auto;
-  transition: background-color 250ms;
+  transition: background-color 250ms, transform 150ms;
   cursor: pointer;
   background-color: #ebbc23;
+}
+
+.next:hover {
+  background-color: #d1a61f;
+  transform: scale(0.95);
+}
+
+.next:focus-visible {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+.next:active {
+  background-color: #d1a61f;
+  transform: scale(0.95);
 }
 
 @media (max-width: 60rem) {

@@ -13,11 +13,18 @@ export function Experience() {
           "./environment/5.png",
           "./environment/6.png",
         ]}
+        intensity={0.05}
       />
 
-      {/* <Sparkles color="orange" scale={4} count={200} /> */}
+      <Ring />
 
-      <Ring></Ring>
+      {/* <EffectComposer>
+        <Bloom
+          intensity={4} // Adjust bloom intensity
+          luminanceThreshold={0.5} // Adjust what brightness level starts to glow
+          luminanceSmoothing={0.9} // Adjust how smooth the glow appears
+        />
+      </EffectComposer> */}
     </>
   );
 }

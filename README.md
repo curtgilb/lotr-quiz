@@ -1,8 +1,6 @@
-# React + Vite
+This is a 20 question timed quiz built with React to test your knowledge of The Lord of Rings books. Some notable features include
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Loads a 3D model of “the precious” and creates reflections of fire on the ring using an environment map.
+- Uses animations and transitions to change the scenery of the background as the quiz progresses.
+- Displays quiz results with a different quote from the book depending on how well you did. Confetti canons if you get a 100%.
+- Responsive background SVG’s by manipulating the viewbox.

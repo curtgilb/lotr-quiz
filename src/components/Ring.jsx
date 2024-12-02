@@ -22,7 +22,7 @@ export function Ring(props) {
     ring.current.rotation.x += delta * 0.1;
   });
 
-  materials.Default.envMapIntensity = 0.3;
+  // materials.Default.envMapIntensity = 0.01;
   materials.Default.emissiveIntensity = 1;
 
   return (
@@ -30,6 +30,7 @@ export function Ring(props) {
       <mesh
         geometry={nodes.defaultMaterial.geometry}
         material={materials.Default}
+        material-color="#808080"
       ></mesh>
     </group>
   );
