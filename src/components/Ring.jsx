@@ -28,10 +28,10 @@ export function Ring(props) {
 
   useEffect(() => {
     if (materials.Default) {
-      materials.Default.envMapIntensity = 0.1;
-      materials.Default.color.set("#ffcc44");
+      materials.Default.envMapIntensity = 0.05;
+      // materials.Default.color.set("#ffdf00");
       materials.Default.emissive.set("#ff9900");
-      materials.Default.roughness = 0.4;
+      materials.Default.roughness = 0.5;
       materials.Default.metalness = 0.95;
       materials.Default.toneMapped = false;
     }
@@ -46,13 +46,14 @@ export function Ring(props) {
     <>
       <spotLight
         position={[0, 5, 5]} // Position the light above and slightly in front of the ring
-        intensity={1.8} // Adjust brightness to your liking
+        intensity={2} // Adjust brightness to your liking
         angle={Math.PI / 6} // Narrow beam for focused lighting
         penumbra={0.5} // Soft edge for a natural look
         color="white" // Neutral light color
         target={ring.current} // Ensure the light targets the ring
       />
-      <group
+
+      <mesh
         ref={ring}
         {...props}
         dispose={null}
@@ -60,12 +61,9 @@ export function Ring(props) {
         onPointerOver={() => setHovered(true)}
         onPointerOut={() => setHovered(false)}
         onClick={() => setClicked(!clicked)}
-      >
-        <mesh
-          geometry={nodes.defaultMaterial.geometry}
-          material={materials.Default}
-        />
-      </group>
+        geometry={nodes.defaultMaterial.geometry}
+        material={materials.Default}
+      />
     </>
   );
 }
