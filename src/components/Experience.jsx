@@ -29,13 +29,13 @@ export function Experience() {
 
       <ambientLight intensity={0.5} />
 
-      <EffectComposer>
+      {/* <EffectComposer>
         <Bloom
           intensity={0.5}
           luminanceThreshold={0.2}
           luminanceSmoothing={0.3}
         />
-      </EffectComposer>
+      </EffectComposer> */}
     </>
   );
 }
