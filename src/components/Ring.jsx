@@ -31,8 +31,8 @@ export function Ring(props) {
       materials.Default.envMapIntensity = 0.01;
       // materials.Default.color.set("#ffdf00");
       materials.Default.emissive.set("#ff9900");
-      materials.Default.roughness = 0.3;
-      materials.Default.metalness = 0.8;
+      // materials.Default.roughness = 0.3;
+      // materials.Default.metalness = 0.8;
       materials.Default.toneMapped = false;
     }
   }, [materials]);
