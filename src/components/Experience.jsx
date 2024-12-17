@@ -16,7 +16,7 @@ export function Experience() {
         ]}
         intensity={0.2}
       />
-      <ambientLight intensity={1} />
+      {/* <ambientLight intensity={0.5} /> */}
 
       <Ring />
 
