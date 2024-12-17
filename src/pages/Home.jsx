@@ -1,4 +1,3 @@
-import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { Link } from "react-router-dom";
 import { Experience } from "../components/Experience";

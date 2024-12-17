@@ -31,9 +31,8 @@ export function Experience() {
 
       <EffectComposer>
         <Bloom
-          mipmapBlur
           intensity={0.5}
-          luminanceThreshold={1}
+          luminanceThreshold={0.2}
           luminanceSmoothing={0.3}
         />
       </EffectComposer>
