@@ -46,7 +46,7 @@ export function Ring(props) {
     <>
       <spotLight
         position={[0, 5, 5]} // Position the light above and slightly in front of the ring
-        intensity={2} // Adjust brightness to your liking
+        intensity={1} // Adjust brightness to your liking
         angle={Math.PI / 6} // Narrow beam for focused lighting
         penumbra={0.5} // Soft edge for a natural look
         color="white" // Neutral light color

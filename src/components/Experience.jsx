@@ -16,7 +16,7 @@ export function Experience() {
         ]}
         intensity={1.5}
       />
-      <ambientLight intensity={2} color={"#ffdf00"} />
+      <ambientLight intensity={1} color={"#ffdf00"} />
 
       <Ring />
 
