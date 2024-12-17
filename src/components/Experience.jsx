@@ -1,6 +1,5 @@
 import { Environment, PresentationControls } from "@react-three/drei";
 import { Ring } from "./Ring";
-import { Bloom, EffectComposer } from "@react-three/postprocessing";
 
 export function Experience() {
   return (
@@ -14,7 +13,7 @@ export function Experience() {
           "./environment/5.png",
           "./environment/6.png",
         ]}
-        intensity={0.01}
+        intensity={0.1}
       />
       <PresentationControls
         global
@@ -27,15 +26,7 @@ export function Experience() {
         <Ring />
       </PresentationControls>
 
-      <ambientLight intensity={0.5} />
-
-      {/* <EffectComposer>
-        <Bloom
-          intensity={0.5}
-          luminanceThreshold={0.2}
-          luminanceSmoothing={0.3}
-        />
-      </EffectComposer> */}
+      <ambientLight intensity={1} />
     </>
   );
 }

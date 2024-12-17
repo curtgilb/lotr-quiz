@@ -28,11 +28,8 @@ export function Ring(props) {
 
   useEffect(() => {
     if (materials.Default) {
-      materials.Default.envMapIntensity = 0.0000001;
-      // materials.Default.color.set("#ffdf00");
+      materials.Default.envMapIntensity = 0.2;
       materials.Default.emissive.set("#ff9900");
-      // materials.Default.roughness = 0.3;
-      // materials.Default.metalness = 0.8;
       materials.Default.toneMapped = false;
     }
   }, [materials]);
