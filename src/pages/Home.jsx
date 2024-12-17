@@ -13,12 +13,7 @@ export function Home() {
           camera={{ position: [0, 0, 5], near: 1 }}
         >
           {/* <Perf position="top-left" /> */}
-          <OrbitControls
-            enableDamping
-            enableRotate
-            enableZoom={false}
-            enablePan={false}
-          />
+
           <Experience />
         </Canvas>
 

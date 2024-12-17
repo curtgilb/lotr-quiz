@@ -1,4 +1,4 @@
-import { Environment } from "@react-three/drei";
+import { Environment, PresentationControls } from "@react-three/drei";
 import { Ring } from "./Ring";
 import { Bloom, EffectComposer } from "@react-three/postprocessing";
 
@@ -14,19 +14,29 @@ export function Experience() {
           "./environment/5.png",
           "./environment/6.png",
         ]}
-        intensity={0.02}
+        intensity={0.01}
       />
-      <Ring />
-      {/* <ambientLight intensity={0.5} />
+      <PresentationControls
+        global
+        rotation={[0, 0, 0]}
+        polar={[-Infinity, Infinity]}
+        azimuth={[-Infinity, Infinity]}
+        config={{ mass: 1, tension: 100 }}
+        speed={-1}
+      >
+        <Ring />
+      </PresentationControls>
 
+      <ambientLight intensity={0.5} />
 
-      {/* <EffectComposer>
+      <EffectComposer>
         <Bloom
-          intensity={1}
-          luminanceThreshold={0.5}
-          luminanceSmoothing={0.2}
+          mipmapBlur
+          intensity={0.5}
+          luminanceThreshold={1}
+          luminanceSmoothing={0.3}
         />
-      </EffectComposer> */}
+      </EffectComposer>
     </>
   );
 }
