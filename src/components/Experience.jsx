@@ -5,7 +5,7 @@ import { Bloom, EffectComposer } from "@react-three/postprocessing";
 export function Experience() {
   return (
     <>
-      <Environment
+      {/* <Environment
         files={[
           "./environment/1.png",
           "./environment/2.png",
@@ -15,7 +15,7 @@ export function Experience() {
           "./environment/6.png",
         ]}
         intensity={0.02}
-      />
+      /> */}
       {/* <ambientLight intensity={0.5} /> */}
 
       <Ring />
