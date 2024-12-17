@@ -14,7 +14,7 @@ export function Experience() {
           "./environment/5.png",
           "./environment/6.png",
         ]}
-        intensity={1.5}
+        intensity={0.5}
       />
       <ambientLight intensity={1} color={"#ffdf00"} />
 
