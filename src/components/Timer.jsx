@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { useEffect } from "react";
 
-export function Timer({ time, setTime, onEnd, initialTime, paused }) {
+export function Timer({ time, setTime, onEnd, paused }) {
   if (time < 0) {
     onEnd();
   }

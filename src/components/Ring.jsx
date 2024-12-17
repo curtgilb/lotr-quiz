@@ -28,7 +28,7 @@ export function Ring(props) {
 
   useEffect(() => {
     if (materials.Default) {
-      materials.Default.envMapIntensity = 0.001;
+      materials.Default.envMapIntensity = 0.0000001;
       // materials.Default.color.set("#ffdf00");
       materials.Default.emissive.set("#ff9900");
       // materials.Default.roughness = 0.3;
