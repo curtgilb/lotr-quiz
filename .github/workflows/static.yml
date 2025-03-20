@@ -37,7 +37,7 @@ jobs:
 
       # Install dependencies with --no-optional flag to avoid native module issues
       - name: Install dependencies
-        run: npm i --no-optional
+        run: npm i
 
       # Build the React app
       - name: Build
