@@ -18,7 +18,7 @@ export function Experience() {
         intensity={0.1}
       />
       <Sparkles
-        amount={150}
+        count={35}
         scale={4}
         speed={0.6}
         size={2}
