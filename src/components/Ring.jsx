@@ -31,7 +31,7 @@ export function Ring(props) {
       materials.Default.envMapIntensity = 0.1;
       materials.Default.emissive.set("#ff9900");
       materials.Default.color.set("#82703b");
-      // materials.Default.metallic = 0.5;
+      materials.Default.metallic = 0.5;
       materials.Default.toneMapped = false;
     }
   }, [materials]);
@@ -43,15 +43,6 @@ export function Ring(props) {
 
   return (
     <>
-      {/* <spotLight
-        position={[0, 5, 5]} // Position the light above and slightly in front of the ring
-        intensity={1} // Adjust brightness to your liking
-        angle={Math.PI / 6} // Narrow beam for focused lighting
-        penumbra={0.5} // Soft edge for a natural look
-        color="white" // Neutral light color
-        target={ring.current} // Ensure the light targets the ring
-      /> */}
-
       <mesh
         ref={ring}
         {...props}

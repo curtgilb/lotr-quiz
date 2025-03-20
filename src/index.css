@@ -91,6 +91,7 @@
   margin-top: 0.8rem;
   transition: background-color 250ms, border 250ms;
 }
+.answers:has(input[type="radio"]:checked),
 .answers:hover,
 .answers:focus-visible {
   background-color: rgba(232, 233, 243, 0.6);

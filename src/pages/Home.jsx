@@ -2,17 +2,33 @@ import { Canvas } from "@react-three/fiber";
 import { Link } from "react-router-dom";
 import { Experience } from "../components/Experience";
 import styles from "../styles/home.module.css";
+import { useEffect } from "react";
 
 export function Home() {
+  useEffect(() => {
+    const handleTouchMove = (event) => {
+      if (event.target instanceof HTMLCanvasElement) {
+        event.preventDefault();
+      }
+    };
+
+    document.addEventListener("touchmove", handleTouchMove, { passive: false });
+
+    return () => {
+      document.removeEventListener("touchmove", handleTouchMove);
+    };
+  }, []);
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.layout}>
         <Canvas
           className={styles.ring}
           camera={{ position: [0, 0, 5], near: 1 }}
+          onTouchStart={(e) => e.preventDefault()}
+          onTouchMove={(e) => e.preventDefault()}
+          style={{ touchAction: "none" }}
         >
-          {/* <Perf position="top-left" /> */}
-
           <Experience />
         </Canvas>
 
